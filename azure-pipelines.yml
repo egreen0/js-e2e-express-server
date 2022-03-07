@@ -23,7 +23,7 @@ steps:
 - script: 'npm install playwright'
   displayName: 'install playwright'
 
-- script: npx playwright test
+- script: npm run test
   displayName: 'run playwright e2e tests'
 
 
