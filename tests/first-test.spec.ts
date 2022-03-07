@@ -8,7 +8,7 @@ test.beforeEach(async({page}) => {
 test('example test', async ({page}) => {
   await page.screenshot({ path: './images/before.png' })
 
-  expect(page.locator('span.title:has-text("Products")')).not.toBeVisible();
+  expect(page.locator('span.title:has-text("Products")')).toBeVisible();
 
   await page.screenshot({ path: './images/after.png' })
 });
