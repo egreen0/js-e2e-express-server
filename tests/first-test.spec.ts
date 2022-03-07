@@ -8,9 +8,7 @@ test.beforeEach(async({page}) => {
 test('example test', async ({page}) => {
   await page.screenshot({ path: './images/before.png' })
 
-  expect(await page.title).toBe("Symetrix - Inspired AV Processing & Control Solutions")
-
-  await page.click("button:has-text('Validate')")
+  expect(page.locator('span.title:has-text("Products")')).toBeVisible();
 
   await page.screenshot({ path: './images/after.png' })
 });
