@@ -20,8 +20,11 @@ steps:
     npm run build
   displayName: 'npm install and build'
 
-- script: npm start
-  displayName: 'run server'
+- script: 'npm install playwright'
+  displayName: 'install playwright'
+
+- script: npx playwright test
+  displayName: 'run playwright e2e tests'
 
 
   
